@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Padding(
                         padding: EdgeInsets.only(left: 20.0),
                         child: Text(
@@ -41,8 +41,9 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                   Column(
+                    // ignore: prefer_const_literals_to_create_immutables
                     children: [
-                      Image(
+                      const Image(
                         image: AssetImage("assets/man.png"),
                         width: 60,
                         height: 60,
@@ -51,6 +52,13 @@ class MyApp extends StatelessWidget {
                   )
                 ],
               ),
+              const Padding(
+                padding: EdgeInsets.only(left: 20, top: 50),
+                child: Text(
+                  "Most Popular",
+                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                ),
+              )
             ],
           ),
         ),
